@@ -5,7 +5,7 @@ CTEST(check_input_summ, value_less_broad)
 {
     const int a = 5000;
     const int result = checkS(a);
-    const int expected = -1;
+    const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }
 
