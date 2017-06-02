@@ -1,15 +1,15 @@
 #include <deposit.h>
 #include <ctest.h>
 
-CTEST(check_input_data_deposit, test1)
+CTEST(check_input_summ, value_less_broad)
 {
     const int a = 5000;
     const int result = checkS(a);
-    const int expected = 0;
+    const int expected = -1;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_days, test2)
+CTEST(check_input_data_days, negative_value)
 {
     const int a = -10;
     const int result = checkD(a);
@@ -17,7 +17,7 @@ CTEST(check_input_data_days, test2)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_days, test3)
+CTEST(check_input_data_days, value_more_broad)
 {
     const int a = 400;
     const int result = checkD(a);
@@ -25,11 +25,4 @@ CTEST(check_input_data_days, test3)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_summ, test4)
-{
-    const int a = 0;
-    const int b = 0;
-    const int result = check(a, b);
-    const int expected = -1;
-    ASSERT_EQUAL(expected, result);
-}
+
