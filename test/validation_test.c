@@ -9,14 +9,6 @@ CTEST(check_input_data_deposit, bad1)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check_input_data_deposit, bad2)
-{
-    const int a = -5000;
-    const int result = checkS(a);
-    const int expected = 0;
-    ASSERT_EQUAL(expected, result);
-}
-
 CTEST(check_input_data_days, bad1)
 {
     const int a = -10;
